@@ -25,15 +25,15 @@ const appendEntry = (title, imgLink, altText, destinationLink) => {
 }
 
 appendEntry(
-    "Chess With More Dimensions",
-    "assets/chesswithmoredimensions.png",
-    "A chessboard with some extra board squares floating around. All squares have various colored lines connecting them.",
-    "https://dylansoldham.github.io/ChessButWithMoreDimensions/"
-);
-
-appendEntry(
     "Conway's Game of Life",
     "assets/conway.png",
     "Conway's Game of Life",
     "https://dylansoldham.github.io/Conways-Game-Of-Life/client/index.html"
+);
+
+appendEntry(
+    "Chess With More Dimensions",
+    "assets/chesswithmoredimensions.png",
+    "A chessboard with some extra board squares floating around. All squares have various colored lines connecting them.",
+    "https://dylansoldham.github.io/ChessButWithMoreDimensions/"
 );
