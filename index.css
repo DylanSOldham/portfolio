@@ -64,6 +64,7 @@ header {
 
 .entry:hover {
     background: gray;
+    cursor: pointer;
 }
 
 .entry-image {
