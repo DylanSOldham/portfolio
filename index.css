@@ -10,8 +10,9 @@ h1 {
 }
 
 h2 {
+    color: #AA77FF;
     margin-left: 10%;
-    margin-top: 25px;
+    margin-top: 45px;
 }
 
 h3 {
@@ -19,7 +20,7 @@ h3 {
 }
 
 strong {
-    font-size: 18px;
+    color: #AA77FF;
 }
 
 header {
@@ -84,4 +85,5 @@ a:hover {
     color: white;
     margin-left: 15%;
     margin-right: 15%;
+    font-size: 20px;
 }
