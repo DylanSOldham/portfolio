@@ -25,6 +25,13 @@ const appendEntry = (title, imgLink, altText, destinationLink) => {
 }
 
 appendEntry(
+    "TETRIS Clone",
+    "assets/tetris.png",
+    "Tetris",
+    "https://dylansoldham.github.io/js-tetris"
+);
+
+appendEntry(
     "Conway's Game of Life",
     "assets/conway.png",
     "Conway's Game of Life",
