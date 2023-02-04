@@ -13,8 +13,22 @@ const appendEntry = (title, imgLink, altText, destinationLink) => {
     entryImage.src = imgLink;
     entryImage.alt = altText;
 
-    entry.addEventListener("click", () => {
-        window.location.href = destinationLink;
+    entry.onmousedown = (event) => {
+        if (event.button === 1) {
+            return false;
+        }
+    }
+
+    entry.addEventListener("mouseup", (event) => {
+        if (event.button === 0) {
+            window.location.href = destinationLink;
+        } 
+        else if (event.button === 1) {
+            window.open(destinationLink, '_blank');
+            return false;
+        }
+        
+        event.preventDefault();
     });
 
     entry.appendChild(entryTitle);
