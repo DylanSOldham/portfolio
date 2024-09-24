@@ -61,6 +61,14 @@ appendEntry(
     "",
 )
 
+appendEntry(
+    teamEntryList,
+    "Solar System Simulation",
+    "assets/solarsim.png",
+    "Solar System Simulation",
+    "https://github.com/DylanSOldham/Solar-Sim",
+)
+
 // appendEntry(
 //     soloEntryList,
 //     "NES Emulator",
@@ -69,13 +77,13 @@ appendEntry(
 //     "",
 // )
 
-appendEntry(
-    soloEntryList,
-    "Numerical Weather Simulation",
-    "assets/numericalweather.png",
-    "Numerical Weather Simulation",
-    "",
-)
+// appendEntry(
+//     soloEntryList,
+//     "Numerical Weather Simulation",
+//     "assets/numericalweather.png",
+//     "Numerical Weather Simulation",
+//     "",
+// )
 
 appendEntry(
     soloEntryList,
