@@ -37,29 +37,29 @@ const appendEntry = (entryList, title, imgLink, altText, destinationLink) => {
     entryList.appendChild(entry)
 }
 
-appendEntry(
-    teamEntryList,
-    "G-PIES",
-    "assets/gpies.png",
-    "G-PIES",
-    "",
-)
+// appendEntry(
+//     teamEntryList,
+//     "G-PIES",
+//     "assets/gpies.png",
+//     "G-PIES",
+//     "",
+// )
 
-appendEntry(
-    teamEntryList,
-    "Steam News App",
-    "assets/steamnews.png",
-    "Steam News App",
-    "",
-)
+// appendEntry(
+//     teamEntryList,
+//     "Steam News App",
+//     "assets/steamnews.png",
+//     "Steam News App",
+//     "",
+// )
 
-appendEntry(
-    teamEntryList,
-    "BattleCasters",
-    "assets/battlecasters.png",
-    "BattleCasters",
-    "",
-)
+// appendEntry(
+//     teamEntryList,
+//     "BattleCasters",
+//     "assets/battlecasters.png",
+//     "BattleCasters",
+//     "",
+// )
 
 appendEntry(
     teamEntryList,
@@ -85,29 +85,29 @@ appendEntry(
 //     "",
 // )
 
-appendEntry(
-    soloEntryList,
-    "Famine Application Framework",
-    "assets/famine.jpg",
-    "Famine Application Framework",
-    "",
-)
+// appendEntry(
+//     soloEntryList,
+//     "Famine Application Framework",
+//     "assets/famine.jpg",
+//     "Famine Application Framework",
+//     "",
+// )
 
-appendEntry(
-    soloEntryList,
-    "PDE Solver Generator",
-    "assets/pdesolver.png",
-    "PDE Solver Generator",
-    "",
-)
+// appendEntry(
+//     soloEntryList,
+//     "PDE Solver Generator",
+//     "assets/pdesolver.png",
+//     "PDE Solver Generator",
+//     "",
+// )
 
-appendEntry(
-    soloEntryList,
-    "Online Fighting Game Demo",
-    "assets/onlinemultiplayerdemo.png",
-    "Online Multiplayer Fighting Game Demo",
-    "",
-)
+// appendEntry(
+//     soloEntryList,
+//     "Online Fighting Game Demo",
+//     "assets/onlinemultiplayerdemo.png",
+//     "Online Multiplayer Fighting Game Demo",
+//     "",
+// )
 
 // appendEntry(
 //     soloEntryList,
