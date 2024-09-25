@@ -101,13 +101,13 @@ appendEntry(
 //     "",
 // )
 
-// appendEntry(
-//     soloEntryList,
-//     "Online Fighting Game Demo",
-//     "assets/onlinemultiplayerdemo.png",
-//     "Online Multiplayer Fighting Game Demo",
-//     "",
-// )
+appendEntry(
+    soloEntryList,
+    "Online Fighting Game Demo",
+    "assets/onlinemultiplayerdemo.png",
+    "Online Multiplayer Fighting Game Demo",
+    "https://github.com/DylanSOldham/multiplayer-demo",
+)
 
 // appendEntry(
 //     soloEntryList,

@@ -92,7 +92,7 @@ header {
 
 .header-navlinks {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: row;
     width: 20vw;
     padding-top: 1vh;
