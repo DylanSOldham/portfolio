@@ -17,8 +17,101 @@
 
         <div class="indented">
             <div style="margin-top:80px;"></div>
-            <h1>G-PIES</h1>
-            <h3>GPU-Parallelized Irradiation Environment Simulator</h3>
+            <h1>G-PIES (GPU-Parallelized Irradiation Environment Simulator)</h1>
+
+            <p class="content-text">
+                This project was the main product of the first 6 months of my senior capstone project at Oregon State University.
+                Below I describe the evolution of the project and the things we learned.
+            </p>
+
+            <br>
+            <h3>Problem</h3>
+
+            <p class="content-text">
+                When a material is exposed to radiation, it is bombarded with high-energy particles that are capable
+                of knocking atoms out of place. This creates defects in the material which can move around, diffuse,
+                and interact with each other.
+            </p>
+            
+            <p class="content-text">
+                The project was proposed and directed by a researcher of nuclear materials at Oregon
+                State University, who kindly advised us throughout the process.
+                The goal of the project was to prototype a GPU-accelerated simulation of the evolution of these defects
+                in a material exposed to radiation, utilizing parallel computing to break the problem up into many
+                pieces that could be computed at once. Improved simulation would help develop better models of material
+                degradation by radiation, and an improved ability to predict how these defects affect
+                material properties is important for the development of next-generation nuclear reactors.
+            </p>
+
+            <br>
+            <h3>The Prototype</h3>
+
+            <p class="content-text">
+                We started by making a prototype based on a model of defect evolution described in a paper our project partner
+                provided us
+                (<a href="https://www.sciencedirect.com/science/article/abs/pii/S0022311503005129">
+                https://www.sciencedirect.com/science/article/abs/pii/S0022311503005129
+                </a>). The model describes the rate of generation of defects as a function of some features of the environment such as
+                temperature, radiation flux, and the existing defect structure. We used the
+
+                <a href="https://en.wikipedia.org/wiki/Euler_method">Euler method</a>
+                
+                to solve for the concentration of different defects over time using these rates.
+            </p>
+
+            <p class="content-text">
+                This approach was successful at simulating very small spans of time. However, the equations in the model we were
+                simulating are considered "stiff" equations. Stiff equations are very difficult to simulate over
+                longer than a few microseconds using the Euler method, no matter how much parallel computation you throw at it. The
+                reason for this is essentially that some of the defects in the material change very fast, and so trying to directly
+                extrapolate their state into the future based on just their current rate of change, which is what the Euler method does, 
+                only works if you simulate it in very impractically small increments of time. We would utilize some more advanced methods
+                later on through a tool called <a>CVODES</a>.
+            </p>
+
+            <p class="content-text">
+                There was another problem too - since this is still an unsolved problem, verifying the results of the simulation was
+                a difficult, creative, and error-prone process. In the end we would just eyeball a graph of
+                empirically measured results and say it looks close enough, and the results of simulations done by previous researchers
+                would vary enough that we couldn't think of a way to do a better comparison than eyeballing the shape of the graph.
+            </p>
+
+            <p class="content-text">
+                This also meant we didn't know exactly what a good model of radiation damage would look like. The model we mimicked had some
+                shortcomings that revealed themselves as we examined the simulation results with our adviser.
+            </p>
+
+            <br>
+            <h3>Premature Optimization and Examining Requirements</h3>
+
+            <p class="content-text">
+                Our process for working on the G-PIES prototype for the first 6 months was basically, our adviser would provide us with a mathematical
+                model, he'd spend time with us to help us understand the reasoning behind the model, we'd talk with him about how we might
+                simulate that model, we'd write the simulation, we'd spend a week or two trying to make sense of the results, 
+                and based on some shortcoming we found in the results, and we'd bring our findings back to our adviser in our weekly meeting,
+                where he would come up with an updated model for us to try. All the while, half of our team spent their days working on a 
+                user interface for G-PIES as it evolved.
+            </p>
+
+            <p class="content-text">
+                I think the problem with this workflow was that in practice, we ended up spending most of our time debugging the equations
+                rather than the code. This was inevitable to some degree with an unsolved problem, but this process of debugging the equations 
+                was what our material scientist adviser wanted to do himself for his research. I realized very late on in the project that
+                the most important thing we could do to help his research was not to write a simulation for him, but to enable him to write
+                simulations himself by somehow giving him access to the computational tools available through C++ without exposing him to some
+                of the debugging nightmares that might result. He was not a technical lightweight by any stretch, but he didn't have the programming
+                experience to quickly create and iterate on these complicated simulations which made use of some relatively advanced programming
+                techniques like GPU parallelization.
+            </p>
+            <p class="content-text">
+                All of the mathematiclal models we'd talked about had a very similar structure, to the point that I felt their implementation
+                as an executable simulation could be totally abstracted over. I ended up creating a program separate from G-PIES where you 
+                can describe the math equations using a custom syntax (With the benefit of hindsight I should've just made a Python library or something), 
+                and it generates human-readable C++ code which compiles into a runnable simulation on-par with G-PIES. Since I graduated shortly 
+                after he first tried it, I don't know if it'll ever see good use, but even if it's not expressive enough to 
+                create all of the models they will want to make in the future, the C++ it generates will give
+                them a much better starting point for making new simulations than any specific simulation we could've written in advance. 
+            </p>
         </div>
     </body>
 </html>

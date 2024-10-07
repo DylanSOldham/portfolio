@@ -37,13 +37,13 @@ const appendEntry = (entryList, title, imgLink, altText, destinationLink) => {
     entryList.appendChild(entry)
 }
 
-// appendEntry(
-//     teamEntryList,
-//     "G-PIES",
-//     "assets/gpies.png",
-//     "G-PIES",
-//     "",
-// )
+appendEntry(
+    teamEntryList,
+    "G-PIES",
+    "assets/gpies.png",
+    "G-PIES",
+    "./project_pages/gpies.html",
+)
 
 // appendEntry(
 //     teamEntryList,
@@ -93,13 +93,13 @@ appendEntry(
 //     "",
 // )
 
-// appendEntry(
-//     soloEntryList,
-//     "PDE Solver Generator",
-//     "assets/pdesolver.png",
-//     "PDE Solver Generator",
-//     "",
-// )
+appendEntry(
+    soloEntryList,
+    "PDE Solver Generator",
+    "assets/pdesolver.png",
+    "PDE Solver Generator",
+    "https://github.com/DylanSOldham/SolverGenerator",
+)
 
 appendEntry(
     soloEntryList,
@@ -125,10 +125,10 @@ appendEntry(
     "https://dylansoldham.github.io/js-tetris"
 )
 
-appendEntry(
-    soloEntryList,
-    "Conway's Game of Life",
-    "assets/conway.png",
-    "Conway's Game of Life",
-    "https://dylansoldham.github.io/Conways-Game-Of-Life/client/index.html"
-)
+// appendEntry(
+//     soloEntryList,
+//     "Conway's Game of Life",
+//     "assets/conway.png",
+//     "Conway's Game of Life",
+//     "https://dylansoldham.github.io/Conways-Game-Of-Life/client/index.html"
+// )
