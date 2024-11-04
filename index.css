@@ -18,7 +18,7 @@ h1 {
 h2 {
     color: #f4f9ff;
     margin-left: 10%;
-    margin-top: 45px;
+    margin-top: 15vh;
 }
 
 h3 {
@@ -94,15 +94,15 @@ header {
     display: flex;
     justify-content: space-around;
     flex-direction: row;
-    width: 20vw;
+    width: min(200px, 50vw);
     padding-top: 1vh;
     padding-right: 1vw;
 }
 
 #team-project-entries {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, min-content);
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, min-content);
     gap: 3vw;
     grid-auto-rows: minmax(100px, auto);
     margin-left: 10%;
@@ -111,8 +111,8 @@ header {
 
 #solo-project-entries {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, min-content);
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, min-content);
     gap: 3vw;
     grid-auto-rows: minmax(100px, auto);
     margin-left: 10%;
@@ -128,9 +128,23 @@ header {
     background: #080530;
 }
 
-.entry:hover {
+/* .entry:hover {
     background: gray;
     cursor: pointer;
+} */
+
+.entry-title {
+    color: #ebecf8;
+    font-size: 20px;
+    text-align: left;
+    padding-left: 1vw;
+    width: 100%;
+}
+
+.entry-content {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
 }
 
 .entry-image {
@@ -138,14 +152,23 @@ header {
     border-radius: 10px;
     width: 100%;
     aspect-ratio: 4 / 3;
-    object-fit: fill;
 }
 
-.entry-title {
+.entry-image-container {
+    width: 50%;
+}
+
+.entry-desc-container {
+    width: 50%;
+    padding-right: 50px;
+}
+
+
+.entry-description {
     color: #ebecf8;
-    font-size: 20px;
-    text-align: center;
     width: 100%;
+    padding: 10px;
+    overflow-wrap: break-word;
 }
 
 a {
