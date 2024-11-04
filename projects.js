@@ -77,9 +77,8 @@ appendEntry(
     </p>
     <p>
         Our simulation was written in C++ and used CUDA to compute a single timestep about 7x faster than with just the CPU. 
-        However, the number of timesteps we had to simulate could not be reduced with the GPU, and these could only be computed
-        sequentially. The remainder of the project was spent exploring numerical methods and building tools to help the next 
-        generation of students who work on this problem.
+        However, the real bottleneck was the number of timesteps we had to run, which the GPU could not help to reduce. The remainder 
+        of the project was spent exploring numerical methods and building tools to help the next  generation of students who work on this problem.
     </p>
     `,
     "assets/gpies.png",
