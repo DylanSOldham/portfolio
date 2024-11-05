@@ -67,18 +67,17 @@ appendEntry(
     </p>
     <p>
         Radiation introduces microscopic defects into materials that are exposed to it. These defects evolve over time, and
-        simulating this evolution are an open problem in materials science. The goal of the project was to attempt 
-        using GPU acceleration to make an existing simulation model fast enough to be viable.
+        simulating this evolution are an open problem in materials science. The goal of the project was to see if it was possible 
+        to use GPU acceleration to make an existing simulation model fast enough to be practically viable.
     </p>
     <p>
-        It sounded like a good plan at the beginning, but we eventually realized that the instability of the equations that
-        govern radiation degradation, at least in all the models we looked at, could not be addressed with any amount of GPU
-        acceleration.
+        Our simulation was written in C++. We used CUDA to compute a single timestep about 7x faster than we could with just the CPU. 
+        However, we found that the real bottleneck was the number of timesteps we had to run, which the GPU could not help to reduce.
     </p>
     <p>
-        Our simulation was written in C++ and used CUDA to compute a single timestep about 7x faster than with just the CPU. 
-        However, the real bottleneck was the number of timesteps we had to run, which the GPU could not help to reduce. The remainder 
-        of the project was spent exploring numerical methods and building tools to help the next  generation of students who work on this problem.
+        With G-PIES we were able to determine for our advisor that no amount of GPU acceleration would make the simulation practical
+        without major improvements in either the physics models or the numerical methods we used. The remainder 
+        of the project was spent exploring numerical methods and building tools to help the next generation of students who work on this problem.
     </p>
     `,
     "assets/gpies.png",
@@ -98,7 +97,7 @@ appendEntry(
         keep it on our phones after the project ended.
     </p>
     <p>
-        You log into Steam, and you're given a list of games you own on your "Profile" page. You can
+        On opening the app, you log into Steam and you're shown a "Profile" page which lists the games you own. You can
         mark any number of these games as "starred", and any recent news articles for starred games
         will appear on the "News" page.
     </p>
